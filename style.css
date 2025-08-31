@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  direction: rtl;
+}
+
+/* 🌞 الوضع الفاتح */
+body.light-mode {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+}
+
+body.light-mode header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.light-mode .movie-card {
+  background-color: #ffffff;
+  color: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+body.light-mode .movie-card {
+  color: #000; /* يخلي كل النصوص داخل الكارت أسود */
+}
+
+body.light-mode .categories button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+}
+
+body.light-mode .categories button:hover {
+  background-color: #2980b9;
+}
+
+body.light-mode a {
+  color: #3498db;
+}
+
+body.light-mode a:hover {
+  color: #2980b9;
+}
+
+
+header {
+  background-color: #1e1e1e;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00d8ff;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center; /* جميع العناصر في نفس المستوى */
+}
+
+nav a,
+.dropdown .dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a i,
+.dropdown .dropbtn i:first-child {
+  font-size: 16px;
+  color: #f90;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+.categories {
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.categories button {
+  background-color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #f90;
+  cursor: pointer;
+}
+.categories button:hover {
+  background-color: #f90;
+  color: #111;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+}
+.movie-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.movie-info { padding: 10px; }
+.movie-title { font-size: 16px; margin-bottom: 5px; color: #f90; }
+.movie-desc { font-size: 13px; color: #ccc; }
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  color: #ccc;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: footerUp 0.6s ease forwards 0.5s;
+}
+
+@keyframes footerUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effects */
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+#toggleThemeBtn:active {
+  animation: press 0.2s ease;
+}
+@keyframes press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 180px;
+  z-index: 1000;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.dropdown-content.show {
+  display: block;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f90;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    background-color: #333;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: fit-content;
+  height: fit-content;
+  align-items: center; 
+  align-items: flex-start;
+    top: 0;
+    left: -250px;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    text-align: right;
+  }
+
+  nav.active { 
+  left: 0px;
+  background-color: #333;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: fit-content;
+  height: fit-content;
+  align-items: center; 
+  align-items: flex-start;
+  }
+
+  #close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #f90;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  #close-menu {
+    display: block; /* يظهر فقط في الموبايل */
+  }
+}
+
+
+  .menu-toggle { display: flex; }
+
+  .dropdown-content { width: 100%; }
+}
+#close-menu {
+  display: none; /* مخفي في الديسكتوب */
+}
+
+@media (max-width: 768px) {
+  #close-menu {
+    display: block; /* يظهر فقط في الموبايل */
+  }
+}
+/* Dropdown للمسلسلات */
+.dropdown-content-series {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 180px;
+  z-index: 1000;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.dropdown-content-series.show {
+  display: block;
+}
+.dropdown-content-series a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content-series a:hover {
+  background-color: #f90;
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#scrollTopBtn.show { display: block; }
+/* 🎬 Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111; /* نفس خلفية الموقع */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loader .spinner {
+  border: 4px solid #444;
+  border-top: 4px solid #f39c12;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.movie-card:hover {
+      transform: rotateX(-15deg) scale(1.05);
+      box-shadow: 0 25px 40px rgba(0,0,0,0.8);
+    }
+

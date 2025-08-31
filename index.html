@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBox</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+  <p>مرحبًا بك في موقعنا 🎬</p>
+</div>
+  <header>
+  <div class="logo">MyBox<span class="true" style="font-size: 14px;color: #fff;background-color: #0095f6;border-radius: 50%;padding: 6px;padding-top: 3px;padding-bottom: 3px;margin-right: 10px;">✔</span></div>
+  <div class="menu-toggle" id="menu-toggle">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="nav-menu">
+  <span id="close-menu">&times;</span>
+  <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn"><i class="fa-solid fa-film"></i> أفلام <i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="Foreign films.html">أفلام أجنبية</a>
+      <a href="#">أفضل الأفلام</a>
+      <a href="#">الأكثر مشاهدة</a>
+      <a href="#">المضاف حديثا</a>
+    </div>
+  </div>
+  <div class="dropdown">
+  <a href="#" class="dropbtn-series">
+    <i class="fa-solid fa-tv"></i> مسلسلات <i class="fa-solid fa-caret-down"></i>
+  </a>
+  <div class="dropdown-content-series">
+    <a href="#">مسلسلات عربية</a>
+    <a href="#">أفضل المسلسلات</a>
+    <a href="#">الأكثر مشاهدة</a>
+    <a href="#">المضاف حديثا</a>
+  </div>
+</div>
+  <a href="contact.html"><i class="fa-solid fa-envelope"></i> اتصل بنا</a>
+</nav>
+
+</header>
+
+
+  <section style="padding: 20px; text-align: center;">
+    <input type="search" id="searchInput" placeholder="ابحث عن فيلم..." 
+           style="width: 100%; max-width: 400px; padding: 10px; border-radius: 5px;">
+    <br>
+    <button id="toggleThemeBtn" 
+            style="padding: 8px 16px; background-color: #f90; border: none; border-radius: 4px; margin-top: 10px;">
+      تغيير الوضع
+    </button>
+    <p id="no-results" style="display:none; color:red; font-size: 18px; margin-top: 20px;">لا توجد نتائج مطابقة.</p>
+  </section>
+
+  <section class="categories">
+    <button data-category="all">الكل</button>
+    <button data-category="أكشن">أكشن</button>
+    <button data-category="دراما">دراما</button>
+    <button data-category="كوميديا">كوميديا</button>
+    <button data-category="رعب">رعب</button>
+  </section>
+
+  <!-- 🎬 الأفلام -->
+  <section class="movie-grid" id="movie-grid">
+    <button id="scrollTopBtn">⬆</button>
+    <a href="details.html" class="movie-card">
+      <img src="https://zaaednews.com/wp-content/uploads/2024/12/IMG-20241219-WA0789.jpg" alt="الدشاش">
+      <div class="movie-info">
+        <div class="movie-title">الدشاش</div>
+        <div class="movie-desc">دراما - أكشن - قصة شاب شعبي يواجه الفساد.</div>
+      </div>
+    </a>
+    <a href="details2.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1sfiGlZGxdOlWOaHriS69FgqiAkIUVGfQ&sz=w800" alt="سيكو سيكو">
+      <div class="movie-info">
+        <div class="movie-title">سيكو سيكو</div>
+        <div class="movie-desc">دراما - كوميديا - أكشن - قصة شابان يتاجران بالممنوعات.</div>
+      </div>
+    </a>
+    <a href="details3.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1Bd610GVaba42_0GwOLlNHtzyhpMi1UI-&sz=w800" alt="وش في وش">
+      <div class="movie-info">
+        <div class="movie-title">وش في وش</div>
+        <div class="movie-desc">كوميديا - دراما</div>
+      </div>
+    </a>
+    <a href="details4.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1IX42PyHaL4S3tWMlI5kPlL9HyhTwgKLy&sz=w800" alt="اللعب مع العيال">
+      <div class="movie-info">
+        <div class="movie-title">اللعب مع العيال</div>
+        <div class="movie-desc">كوميديا</div>
+      </div>
+    </a>
+    <a href="details5.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1j5NiD3C8eVHiaStzMPhyR9tj6GPLLReN&sz=w800" alt="بضع ساعات في يوم ما">
+      <div class="movie-info">
+        <div class="movie-title">بضع ساعات في يوم ما</div>
+        <div class="movie-desc">كوميديا - رومانسي - تشويق واثارة</div>
+      </div>
+    </a>
+    <a href="details6.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1SXezQnEqiYMx1iT4b3-9OP8boWsFiq18&sz=w800" alt="فاصل من اللحظات اللذيذة">
+      <div class="movie-info">
+        <div class="movie-title">فاصل من اللحظات اللذيذة</div>
+        <div class="movie-desc">كوميديا - فانتازيا</div>
+      </div>
+    </a>
+    <a href="details7.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1C-VeOyDdyV5al0GioChfSqInTA4kJvSe&sz=w800" alt="ولاد رزق 1">
+      <div class="movie-info">
+        <div class="movie-title">ولاد رزق 1</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+    <a href="details8.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=13PN7O9lE8zQcYl6vq6rudvK2yEc5JDEl&sz=w800" alt="ولاد رزق 2">
+      <div class="movie-info">
+        <div class="movie-title">ولاد رزق 2</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+    <a href="details9.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=13yxgUPmNhVX8vgceXlaWiiOdJhvshr28&sz=w800" alt="ولاد رزق 3">
+      <div class="movie-info">
+        <div class="movie-title">ولاد رزق 3</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+    <a href="details10.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1ktWYoVB6nKG0tWj5CLWdblEFZZ9KRLba&sz=w800" alt="البحث عن منفذ لخروج السيد رامبو">
+      <div class="movie-info">
+        <div class="movie-title">البحث عن منفذ لخروج السيد رامبو 2024</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+    <a href="details11.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1qgmJ64404zbPCWhB4-Z-Eqc62ucdFFCb&sz=w800" alt="ريستارت 2025">
+      <div class="movie-info">
+        <div class="movie-title">ريستارت 2025</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+    <a href="details12.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=17vuDa5bvDEaY7ykLO4Gu4YLWYe2PaJe0&sz=w800" alt="حرب كرموز">
+      <div class="movie-info">
+        <div class="movie-title">حرب كرموز 2018</div>
+        <div class="movie-desc">اثارة - أكشن - حرب</div>
+      </div>
+    </a>
+    <a href="details13.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1DRzOZ8GUu1lJAsDODAYlzBnFFjyuTJTt&sz=w800" alt="عادل مش عادل">
+      <div class="movie-info">
+        <div class="movie-title">عادل مش عادل 2024</div>
+        <div class="movie-desc">اثارة - أكشن - كوميديا</div>
+      </div>
+    </a>
+    <a href="details14.html" class="movie-card">
+      <img src="https://drive.google.com/thumbnail?id=1KD7hZAZZGL0XfjpIMBJJGEGSLeeNnW3J&sz=w800" alt="عمهم">
+      <div class="movie-info">
+        <div class="movie-title">عمهم 2022</div>
+        <div class="movie-desc">اثارة - أكشن</div>
+      </div>
+    </a>
+  </section>
+
+  <footer>© جميع الحقوق محفوظة لـ MyBox</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="موقع لمشاهدة أحدث الأفلام والمسلسلات بتصنيفات متنوعة.">
+  <meta name="keywords" content="أفلام, مسلسلات, عربي, أكشن, كوميديا, دراما">
+  <meta name="author" content="يلا سينما">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>MyBox</title>
+</head>
+<body>
+  <header>
+  <div class="logo">MyBox<span class="true" style="font-size: 14px;color: #fff;background-color: #0095f6;border-radius: 50%;padding: 6px;padding-top: 3px;padding-bottom: 3px;margin-right: 10px;">✔</span></div>
+  <div class="menu-toggle" id="menu-toggle">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="nav-menu">
+  <span id="close-menu">&times;</span>
+  <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn"><i class="fa-solid fa-film"></i> أفلام <i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="Foreign films.html">أفلام أجنبية</a>
+      <a href="#">أفضل الأفلام</a>
+      <a href="#">الأكثر مشاهدة</a>
+      <a href="#">المضاف حديثا</a>
+    </div>
+  </div>
+  <div class="dropdown">
+  <a href="#" class="dropbtn-series">
+    <i class="fa-solid fa-tv"></i> مسلسلات <i class="fa-solid fa-caret-down"></i>
+  </a>
+  <div class="dropdown-content-series">
+    <a href="#">مسلسلات عربية</a>
+    <a href="#">أفضل المسلسلات</a>
+    <a href="#">الأكثر مشاهدة</a>
+    <a href="#">المضاف حديثا</a>
+  </div>
+</div>
+  <a href="contact.html"><i class="fa-solid fa-envelope"></i> اتصل بنا</a>
+</nav>
+
+</header>
+
+  <section style="padding: 0 20px; text-align: center;">
+    <input type="search" id="searchInput" placeholder="ابحث عن فيلم..." style="width: 100%; max-width: 400px; padding: 10px; margin: 10px 0; border: none; border-radius: 5px; font-size: 16px;">
+    <br>
+    <button id="toggleThemeBtn" style="padding: 8px 16px; background-color: #f90; border: none; border-radius: 4px; color: #111; cursor: pointer; margin-bottom: 10px;">تغيير الوضع</button>
+    <p id="no-results" style="display:none; color:red; font-size: 18px; margin-top: 20px;">لا توجد نتائج مطابقة.</p>
+  </section>
+
+  <section class="categories">
+    <button data-category="all">الكل</button>
+    <button data-category="أكشن">أكشن</button>
+    <button data-category="دراما">دراما</button>
+    <button data-category="كوميديا">كوميديا</button>
+    <button data-category="تشويق">تشويق</button>
+    <button data-category="رعب">رعب</button>
+  </section>
+
+  <section class="movie-grid" id="movie-grid">
+    <div class="movie-card" onclick="location.href='Foreign_details0.html'">
+      <img src="https://drive.google.com/thumbnail?id=1wX3685iIGuZFTb_m8YWXbyZsNt-ItSg5&sz=w800" alt="فيلم heads of state">
+      <div class="movie-info">
+        <div class="movie-title">فيلم Heads of State 2025</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details1.html'">
+      <img src="https://drive.google.com/thumbnail?id=1G-qgKOuC4ol7GlM1UVyg8fxCLXCem4aU&sz=w800.jpg" alt="فيلم Ice Road Vengeance 2025 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم Ice Road Vengeance 2025 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details2.html'">
+      <img src="https://drive.google.com/thumbnail?id=1nzXWDKu-3lKrW5opgHVC9MZOJrGJScoc&sz=w800" alt="فيلم Kingdom of the Planet of the Apes 2024 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم Kingdom of the Planet of the Apes 2024 مترجم</div>
+        <div class="movie-desc"> أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details3.html'">
+      <img src="https://drive.google.com/thumbnail?id=1yznOr3JlXgYLc4xAd3W3_meZ1Qh5gZaz&sz=w800" alt="فيلم Thunderbolts 2025 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم Thunderbolts 20255 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details4.html'">
+      <img src="https://drive.google.com/thumbnail?id=1TvfADDUz8KOhO8ygWDcZZVDlQkQWZMzO&sz=w800" alt="فيلم John Wick 2014 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم John Wick 2014 مترجم</div>
+        <div class="movie-desc">جريمة - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details5.html'">
+      <img src="https://drive.google.com/thumbnail?id=1N3Uv08R0CPnuC5qalIavhyP0u35N2bB0&sz=w800" alt="فيلم John Wick 2017 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم John Wick 2017 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details6.html'">
+      <img src="https://drive.google.com/thumbnail?id=1Klg31Jvite9tLLjFaYXyXMNBdc91Zw6p&sz=w800" alt="فيلم John Wick 2019 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم John Wick 2019 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details7.html'">
+      <img src="https://drive.google.com/thumbnail?id=1SO66ksEGhNMqUQkQzwaMDM_qYdntunL9&sz=w800" alt="فيلم John Wick 2023 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم John Wick 2023 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details8.html'">
+      <img src="https://drive.google.com/thumbnail?id=1j2tLB2PZewyQ6mQQ2Ln5cN1yxv-51yFM&sz=w800" alt="فيلم I Am Legend 2007 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم I Am Legend 2007 مترجم</div>
+        <div class="movie-desc">دراما - أكشن - تشويق - خيال</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details9.html'">
+      <img src="https://drive.google.com/thumbnail?id=1DnEVvJU4P5whAmiXvXC7YTCCoFXmcxRD&sz=w800" alt="فيلم Hostile Takeover 2025">
+      <div class="movie-info">
+        <div class="movie-title">فيلم Hostile Takeover 2025</div>
+        <div class="movie-desc">دراما - أكشن - تشويق - اثارة</div>
+      </div>
+    </div>
+    <div class="movie-card" onclick="location.href='Foreign_details10.html'">
+      <img src="https://drive.google.com/thumbnail?id=1nQex62PxQghfuuCoyoNe6TboyKSnrcU6&sz=w800" alt="فيلم The Naked Gun 2025 مترجم">
+      <div class="movie-info">
+        <div class="movie-title">فيلم The Naked Gun 2025 مترجم</div>
+        <div class="movie-desc">أكشن - تشويق - اثارة</div>
+      </div>
+    </div>
+  </section>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="Foreign films.html" class="active">1</a>
+    <a href="Foreign films.html">2</a>
+    <a href="Foreign films.html">3</a>
+    <a href="Foreign films.html">4</a>
+    <a href="Foreign films.html">5</a>
+    <a href="#">&raquo;</a>
+  </div>
+ <footer>© جميع الحقوق محفوظة لـ MyBox</footer>
+  <script src="script.js"></script>
+</body>
+</html>
